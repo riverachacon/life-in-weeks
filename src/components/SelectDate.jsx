@@ -7,11 +7,12 @@ const dateFormat = "YYYY-MM-DD";
 
 function SelectDate(props) {
   const [birthday, setBirthday] = useState("");
-  const [weeksLived, setWeeksLived] = useState(null);
-  const [weeksNotLived, setWeeksNotLived] = useState(null);
-  const currentDate = new Date();
+  const [weeksLived, setWeeksLived] = useState("");
+  const [weeksNotLived, setWeeksNotLived] = useState("");
+  let currentDate = new Date();
 
   function weeksBetween(d1, d2) {
+    // checking how many weeks the user has lived
     return Math.round((d2 - d1) / (7 * 24 * 60 * 60 * 1000));
   }
 
@@ -20,7 +21,11 @@ function SelectDate(props) {
     setBirthday(dateString);
   }
   function handleSubmit(e) {
+    const birthdayDate = new Date(birthday); // Convert 'birthday' to Date object
+    setBirthday(birthdayDate);
     props.onDateSelected(birthday);
+    setWeeksLived(weeksBetween(birthdayDate, currentDate));
+    props.onWeeksLived(weeksLived);
     e.preventDefault();
   }
 
@@ -32,7 +37,7 @@ function SelectDate(props) {
           <DatePicker
             onChange={onChange}
             minDate={dayjs("1930-10-01", dateFormat)}
-            maxDate={dayjs("2012-11-31", dateFormat)}
+            maxDate={dayjs("2012-12-31", dateFormat)}
           />
           <div className="submitButton">
             <button type="submit">Done</button>
