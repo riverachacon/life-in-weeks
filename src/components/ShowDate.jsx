@@ -1,0 +1,1 @@
+function ShowDate(props) {}

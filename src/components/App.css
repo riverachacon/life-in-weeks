@@ -1,0 +1,19 @@
+h1 {
+  color: brown;
+}
+.enterB {
+  text-align: center;
+}
+.selectDateContainer {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+}
+.Space {
+  padding-right: 5%;
+}
+.submitButton {
+  /* margin-left: 5%; */
+}
