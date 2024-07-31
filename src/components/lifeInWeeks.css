@@ -4,11 +4,37 @@
   padding: 20px;
   box-shadow: 0 6px 8px rgba(229, 119, 30, 0.5);
 }
+.info {
+  position: fixed;
+  background-color: rgba(56, 54, 54, 0.8);
+  width: 8%;
+}
 .weeks-count {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
   gap: 2px;
   width: 30%;
+}
+.instructions {
+  padding-left: 10%;
+}
+.instructions p {
+  margin-left: 1%;
+}
+.lived,
+.left {
+  display: flex;
+  align-items: center;
+}
+.lived-color {
+  height: 15px;
+  width: 15px;
+  background: #d62828;
+}
+.left-color {
+  height: 15px;
+  width: 15px;
+  background: #adc178;
 }
 .weeks-lived {
   font-size: 1px;
@@ -23,4 +49,14 @@
   height: 15px;
   width: 15px;
   background: #adc178;
+}
+.weeks-lived:hover {
+  transition: 0.3s;
+  background: #7b2020;
+  transform: scale(1.5);
+}
+.weeks-left:hover {
+  transition: 0.3s;
+  transform: scale(1.5);
+  background: #73804f;
 }
