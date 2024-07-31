@@ -1,6 +1,6 @@
 .weeks-container {
-  max-width: 900px; /* Adjust this value to your desired maximum width */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 900px;
+  margin: 0 auto; /* center the container */
   padding: 20px;
   box-shadow: 0 6px 8px rgba(229, 119, 30, 0.5);
 }

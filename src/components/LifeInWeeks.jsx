@@ -1,28 +1,3 @@
-// import { useState, useEffect } from "react";
-// import "./lifeInWeeks.css";
-// function LifeInWeeks(props) {
-//   let weeksLived = props.onWeeksLived;
-//   let weeksLeft = props.onWeeksLeft;
-//   let birthday = props.onBirthday;
-
-//   return (
-//     <>
-//       <h2>hola</h2>
-//       <div className="weeks-container">
-//         <div className="weeks-count">
-//           {Array.from({ length: weeksLived }).map((i, index) => (
-//             <div key={index} className="weeks-lived"></div>
-//           ))}
-//           {Array.from({ length: weeksLeft }).map((i, index) => (
-//             <div key={index} className="weeks-left"></div>
-//           ))}
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-// export default LifeInWeeks;
-
 import { useState, useEffect } from "react";
 import "./lifeInWeeks.css";
 function LifeInWeeks(props) {
