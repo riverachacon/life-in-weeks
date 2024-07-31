@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import SelectDate from "./SelectDate";
+import LifeInWeeks from "./LifeInWeeks";
+
 function App() {
   const [date, setDate] = useState(""); // date is the same users birthday
   const [weeksLived, setWeeksLived] = useState("");
-  const weeksLeft = 4732 - weeksLived;
+  const weeksLeft = 4732 - weeksLived; // 4732 are 91 years
+
   useEffect(() => {
     if (date && weeksLived) {
       console.log("user birthday: ", date);
@@ -22,8 +25,18 @@ function App() {
   }
   return (
     <>
-      <h1>How many weeks to live life?</h1>
-      <SelectDate onDateSelected={handleDate} onWeeksLived={handleWeeksLived} />
+      <div className="main-container">
+        <h1>How many weeks to live life?</h1>
+        <SelectDate
+          onDateSelected={handleDate}
+          onWeeksLived={handleWeeksLived}
+        />
+        <LifeInWeeks
+          onBirthday={date}
+          onWeeksLived={weeksLived}
+          onWeeksLeft={weeksLeft}
+        />
+      </div>
     </>
   );
 }

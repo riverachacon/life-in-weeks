@@ -1,5 +1,8 @@
+.main-container {
+}
 h1 {
-  color: brown;
+  color: #e9c46a;
+  text-align: center;
 }
 .enterB {
   text-align: center;
@@ -15,5 +18,5 @@ form {
   padding-right: 5%;
 }
 .submitButton {
-  /* margin-left: 5%; */
+  margin-left: 0.6%;
 }
