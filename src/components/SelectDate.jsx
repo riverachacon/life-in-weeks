@@ -7,12 +7,10 @@ const dateFormat = "YYYY-MM-DD";
 
 function SelectDate(props) {
   const [birthday, setBirthday] = useState("");
-  const [weeksLived, setWeeksLived] = useState("");
-  const [weeksNotLived, setWeeksNotLived] = useState("");
   let currentDate = new Date();
 
   function weeksBetween(d1, d2) {
-    // checking how many weeks the user has lived
+    // calculating how many weeks the user has lived
     return Math.round((d2 - d1) / (7 * 24 * 60 * 60 * 1000));
   }
 
@@ -21,12 +19,11 @@ function SelectDate(props) {
     setBirthday(dateString);
   }
   function handleSubmit(e) {
-    const birthdayDate = new Date(birthday); // Convert 'birthday' to Date object
-    setBirthday(birthdayDate);
-    props.onDateSelected(birthday);
-    setWeeksLived(weeksBetween(birthdayDate, currentDate));
-    props.onWeeksLived(weeksLived);
     e.preventDefault();
+    const birthdayDate = new Date(birthday); // convert 'birthday' to Date object
+    const livedWeeks = weeksBetween(birthdayDate, currentDate); // weeksLived
+    props.onDateSelected(birthdayDate);
+    props.onWeeksLived(livedWeeks); // pass calculated livedWeeks to original weeksLived
   }
 
   return (
