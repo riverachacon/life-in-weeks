@@ -1,0 +1,26 @@
+.weeks-container {
+  max-width: 900px; /* Adjust this value to your desired maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  box-shadow: 0 6px 8px rgba(229, 119, 30, 0.5);
+}
+.weeks-count {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  gap: 2px;
+  width: 30%;
+}
+.weeks-lived {
+  font-size: 1px;
+  margin: 0.3%;
+  height: 15px;
+  width: 15px;
+  background: #d62828;
+}
+.weeks-left {
+  font-size: 1px;
+  margin: 0.3%;
+  height: 15px;
+  width: 15px;
+  background: #adc178;
+}
