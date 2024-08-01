@@ -8,6 +8,7 @@
   position: fixed;
   background-color: rgba(56, 54, 54, 0.8);
   width: 8%;
+  color: #fefae0;
 }
 .weeks-count {
   display: grid;
@@ -21,6 +22,14 @@
 .instructions p {
   margin-left: 1%;
 }
+.instructions-info {
+  width: 36%;
+}
+.instructions-info p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #264653;
+  font-size: 1.4rem;
+}
 .lived,
 .left {
   display: flex;
@@ -29,7 +38,7 @@
 .lived-color {
   height: 15px;
   width: 15px;
-  background: #d62828;
+  background: #e76f51;
 }
 .left-color {
   height: 15px;
@@ -41,7 +50,7 @@
   margin: 0.3%;
   height: 15px;
   width: 15px;
-  background: #d62828;
+  background: #e76f51;
 }
 .weeks-left {
   font-size: 1px;
@@ -59,4 +68,7 @@
   transition: 0.3s;
   transform: scale(1.5);
   background: #73804f;
+}
+.footer-spacer {
+  height: 50vh;
 }

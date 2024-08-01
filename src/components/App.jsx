@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import SelectDate from "./SelectDate";
 import LifeInWeeks from "./LifeInWeeks";
+import Footer from "./Footer";
 
 function App() {
   const [date, setDate] = useState(""); // date is the same users birthday
   const [weeksLived, setWeeksLived] = useState("");
-  const weeksLeft = 4732 - weeksLived; // 4732 are 91 years
+  const weeksLeft = 4732 - weeksLived; // 4732 weeks are 91 years
 
   useEffect(() => {
     if (date && weeksLived) {
@@ -36,6 +37,7 @@ function App() {
           onWeeksLived={weeksLived}
           onWeeksLeft={weeksLeft}
         />
+        <Footer />
       </div>
     </>
   );

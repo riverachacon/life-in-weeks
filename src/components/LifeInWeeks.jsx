@@ -26,11 +26,23 @@ function LifeInWeeks(props) {
   return (
     <>
       {showMessage ? ( // if showMessage true, show h2
-        <h2>Please enter your birthday</h2>
+        <>
+          {" "}
+          <h2 className="enterbd">Please enter your birthday</h2>
+          <div className="footer-spacer"></div>
+        </>
       ) : (
         // else show weeks
         <>
           <div className="instructions">
+            {/*add numbers to weeks lived and remaining */}
+            <div className="instructions-info">
+              <p>
+                Each box stands for one week of your life. The chart below has
+                52 boxes across for the weeks in a year and 91 boxes down for
+                the (hopefully) 91 years of your life.
+              </p>
+            </div>
             <div className="lived">
               <div className="lived-color"></div> <p>WEEKS LIVED</p>
             </div>
