@@ -5,19 +5,29 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #264653;
+  background-color: #797d62;
+}
+@font-face {
+  font-family: "retroFont";
+  src: url("/Retro60Prime.ttf") format("truetype");
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #606f49;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
+  transform: scale(1.5);
 }
-
+.enterbd {
+  font-family: "retroFont", sans-serif;
+  font-size: 1.3rem;
+  color: #fefae0;
+}
 h1 {
+  font-family: "retroFont", sans-serif;
   font-size: 3.2em;
   line-height: 1.1;
 }

@@ -1,10 +1,12 @@
-.main-container {
-}
 h1 {
   color: #e9c46a;
   text-align: center;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .enterB {
+  color: #fefae0;
   text-align: center;
 }
 .selectDateContainer {
@@ -19,4 +21,11 @@ form {
 }
 .submitButton {
   margin-left: 0.6%;
+}
+footer p {
+  text-align: center;
+  color: #fefae0;
+}
+hr {
+  border-color: #797d62;
 }
