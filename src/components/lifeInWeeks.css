@@ -4,6 +4,9 @@
   padding: 20px;
   box-shadow: 0 6px 8px rgba(229, 119, 30, 0.5);
 }
+.enterbd {
+  padding-left: 5vh;
+}
 .info {
   position: fixed;
   background-color: rgba(56, 54, 54, 0.8);
